@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    margin: 350px ;
+}
+
+div {
+    position: relative;
+    z-index: 1;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 9rem;
+    color: #fff;
+    filter: blur(2px);
+
+}
+
+ul {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+ul li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    filter: blur(3px);
+}
+
+ul li:nth-child(even) {
+    animation: animateven 6s linear infinite;
+}
+
+@keyframes animateven { 
+    0% {
+        transform: translate(0,0) scale(1);
+        opacity: 2;
+    }
+    50%{
+        opacity: 2;
+    }
+    100% {
+        transform: translate(300px, -600px) scale(15);
+        opacity: 1;
+    }   
+}
+
+ul li:nth-child(odd) {
+    animation: animatodd 6s linear infinite;
+}
+
+@keyframes animatodd { 
+    0% {
+        transform: translate(0,0) scale(1);
+        opacity: 2;
+    }
+    50%{
+        opacity: 2;
+    }
+    100% {
+        transform: translate(-300px, -600px) scale(12);
+        opacity: 1;
+    }    
+}
+
+ul li:nth-child(1) {
+    animation-delay: 0s;
+    background-color: rgb(0, 179, 255);
+}
+
+ul li:nth-child(2) {
+    animation-delay: 1s;
+    background-color: tomato;
+}
+
+ul li:nth-child(3) {
+    animation-delay: 2s;
+    background-color: rgb(0, 0, 255);
+}
+
+ul li:nth-child(4) {
+    animation-delay: 3s;
+    background-color: rgb(246, 239, 33);
+}
+
+ul li:nth-child(5) {
+    animation-delay: 4s;
+    background-color: rgb(4, 255, 0);
+}
+ul li:nth-child(6) {
+    animation-delay: 5s;
+    background-color: violet;
+
+}
